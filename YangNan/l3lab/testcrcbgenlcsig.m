@@ -1,20 +1,21 @@
-%% Plot the  sinusoidal signal
+%% Plot the linear chirp signal
 % Signal parameters
-f0=25;
-phi0=pi/2;
+a1=10;
+a2=3;
 A = 10;
+phi0=pi/2;
 % Instantaneous frequency after 1 sec is 
-
-samplFreq = 10*f0;
+maxFreq = a1+2*a2;
+samplFreq = 5*maxFreq;
 samplIntrvl = 1/samplFreq;
 
 % Time samples
-timeVec = 0:samplIntrvl:1.0;
+timeVec = 0:samplIntrvl:3.0;
 % Number of samples
 nSamples = length(timeVec);
 
 % Generate the signal
-sigVec = crcbgensinsig(timeVec,A,f0,phi0);
+sigVec = crcbgenlcsig(timeVec,A,[a1,a2],phi0);
 
 %Plot the signal 
 figure;
