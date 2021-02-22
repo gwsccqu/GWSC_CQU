@@ -10,6 +10,6 @@ function sigVec = genAMFMsig(dataX,snr,b,f0,f1)
 
 modulation=sin(2*pi*f0*dataX+b*cos(2*pi*f1*dataX));
 sigVec = cos(2*pi*f1*dataX).*modulation;
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 

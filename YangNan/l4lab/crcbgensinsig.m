@@ -9,6 +9,6 @@ function sigVec = crcbgensinsig(dataX,snr,f0,phi0)
 %Yang Nan, Feb 2021
 
 sigVec = sin(2*pi*f0*dataX+phi0);
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 

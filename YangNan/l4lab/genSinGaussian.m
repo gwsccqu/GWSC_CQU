@@ -12,6 +12,6 @@ function sigVec = genSinGaussian(dataX,snr,qcCoefs,f0,phi0)
 GaussianVec = exp(-(dataX-qcCoefs(1)).^2/(2*qcCoefs(2)^2));
 SineVec=sin(2*pi*f0*dataX+phi0);
 sigVec = GaussianVec.*SineVec;
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 

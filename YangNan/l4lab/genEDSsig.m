@@ -11,6 +11,6 @@ function sigVec = genEDSsig(dataX,snr,ta,f0,tao,phi0,L)
 
 sigVec = exp(-(dataX-ta)/tao).*sin(2*pi*f0*dataX+phi0);
 sigVec = sigVec.*(dataX>=ta & dataX<=ta+L) + 0*(dataX<ta | dataX>ta+L);
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 

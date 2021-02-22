@@ -11,6 +11,6 @@ function sigVec = genLTCsig(dataX,snr,ta,f0,f1,phi0,L)
 
 sigVec = sin(2*pi*(f0*(dataX-ta)+f1*(dataX-ta).^2)+phi0);
 sigVec = sigVec.*(dataX>=ta & dataX<=ta+L) + 0*(dataX<ta | dataX>ta+L);
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 

@@ -12,7 +12,7 @@ function sigVec = genStemFM(dataX,snr,ta,f0,f1)
 sigVec1 = sin(2*pi*f0*dataX);
 sigVec2 = sin(2*pi*f1*(dataX-ta)+2*pi*f0*ta);
 sigVec = sigVec1.*(dataX<=ta) + sigVec2.*(dataX>ta);
-sigVec = snr*sigVec/norm(sigVec);
+sigVec = snr*sigVec;
 
 
 
