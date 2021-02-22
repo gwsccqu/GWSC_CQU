@@ -1,16 +1,16 @@
 %% Plot the AM-FM signal
 % Signal parameters
-b=50;
+b=5;
 A = 10;
 f0=10;
 f1=3;
-% Instantaneous frequency after 10 sec is 
+% Instantaneous frequency after 100 sec is 
 
 samplFreq = 5*max(f0,b*f1);
 samplIntrvl = 1/samplFreq;
 
 % Time samples
-timeVec = 0:samplIntrvl:10.0;
+timeVec = 0:samplIntrvl:100.0;
 % Number of samples
 nSamples = length(timeVec);
 
@@ -40,8 +40,8 @@ plot(posFreq,abs(fftSig));
 
 %Plot a spectrogram
 %----------------
-winLen = 0.2;%sec
-ovrlp = 0.1;%sec
+winLen = 0.35;%sec
+ovrlp = 0.0;%sec
 %Convert to integer number of samples 
 winLenSmpls = floor(winLen*samplFreq);
 ovrlpSmpls = floor(ovrlp*samplFreq);
@@ -50,3 +50,4 @@ figure;
 imagesc(T,F,abs(S)); axis xy;
 xlabel('Time (sec)');
 ylabel('Frequency (Hz)');
+title(' AM-FM ');

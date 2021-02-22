@@ -50,3 +50,4 @@ figure;
 imagesc(T,F,abs(S)); axis xy;
 xlabel('Time (sec)');
 ylabel('Frequency (Hz)');
+title('AM signal');

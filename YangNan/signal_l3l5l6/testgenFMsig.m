@@ -40,8 +40,8 @@ plot(posFreq,abs(fftSig));
 
 %Plot a spectrogram
 %----------------
-winLen = 0.2;%sec
-ovrlp = 0.1;%sec
+winLen = 0.1;%sec
+ovrlp = 0.;%sec
 %Convert to integer number of samples 
 winLenSmpls = floor(winLen*samplFreq);
 ovrlpSmpls = floor(ovrlp*samplFreq);
@@ -50,3 +50,4 @@ figure;
 imagesc(T,F,abs(S)); axis xy;
 xlabel('Time (sec)');
 ylabel('Frequency (Hz)');
+title('FM signal');

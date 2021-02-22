@@ -2,18 +2,18 @@
 % Signal parameters
 
 ta = 1;
-L = 7;
+L = 3;
 A = 10;
-f0=5;
-f1=3;
+f0=2;
+f1=2;
 phi0=pi;
-% Instantaneous frequency after 10 sec is 
+% Instantaneous frequency after 5 sec is 
 
 samplFreq = 5*(f0+2*f1);
 samplIntrvl = 1/samplFreq;
 
 % Time samples
-timeVec = 0:samplIntrvl:10.0;
+timeVec = 0:samplIntrvl:5.0;
 % Number of samples
 nSamples = length(timeVec);
 
@@ -43,7 +43,7 @@ plot(posFreq,abs(fftSig));
 
 %Plot a spectrogram
 %----------------
-winLen = 0.2;%sec
+winLen = 0.3;%sec
 ovrlp = 0.1;%sec
 %Convert to integer number of samples 
 winLenSmpls = floor(winLen*samplFreq);
@@ -53,3 +53,4 @@ figure;
 imagesc(T,F,abs(S)); axis xy;
 xlabel('Time (sec)');
 ylabel('Frequency (Hz)');
+title('linear transient chirp');
