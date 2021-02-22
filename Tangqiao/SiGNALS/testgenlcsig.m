@@ -5,9 +5,10 @@ f0 =10
 f1 =3
 pha =1
 % Instantaneous frequency after 1 sec is 
-maxfreq = f0
-samplFreq = 10*maxfreq;
-samplIntrvl = 1/samplFreq;
+maxFreq = f0 + 2 * f1 * 1
+samplFreq = 10 * maxFreq;
+samplIntrvl = 1  /samplFreq;
+
 
 % Time samples
 timeVec = 0:samplIntrvl:1.0;
