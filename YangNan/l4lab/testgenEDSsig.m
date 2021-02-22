@@ -10,7 +10,7 @@ tao=2;
 phi0=pi;
 % Instantaneous frequency after 10 sec is 
 
-samplFreq = 5*f0;
+samplFreq = 5*2*f0;
 samplIntrvl = 1/samplFreq;
 
 % Time samples

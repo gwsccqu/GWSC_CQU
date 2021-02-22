@@ -7,7 +7,7 @@ f0=1;
 f1=10;
 % Instantaneous frequency after 1 sec is 
 
-samplFreq = 5*max(f0,f1);
+samplFreq = 5*2*max(f0,f1);
 samplIntrvl = 1/samplFreq;
 
 % Time samples
