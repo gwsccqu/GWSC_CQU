@@ -10,7 +10,7 @@ samplFreq = 5*maxFreq;
 samplIntrvl = 1/samplFreq;
 
 % Time samples
-timeVec = 0:samplIntrvl:3.0;
+timeVec = 0:samplIntrvl:1.0;
 % Number of samples
 nSamples = length(timeVec);
 
